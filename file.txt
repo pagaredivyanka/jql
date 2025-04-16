@@ -1,0 +1,4 @@
+to extract data from people whose skills contains React
+
+jq ".people[] | select(.skills | contains([\"React\"]))" file.json
+

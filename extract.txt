@@ -1,0 +1,6 @@
+jq '{temperature: .weather.temp, condition: .weather.desc}' extract.json
+
+Output: 
+{ 
+    "temperature": 30, "condition": "Sunny" 
+}

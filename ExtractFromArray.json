@@ -1,0 +1,20 @@
+{ "users": 
+[ 
+    { 
+        "name": "D", 
+        "roles": ["admin", "dev"] 
+    },
+    { 
+        "name": "R", 
+        "roles": ["Test", "Engg"] 
+    },
+    { 
+        "name": "D1", 
+        "roles": ["Software", "Dev"] 
+    },
+    { 
+        "name": "V", 
+        "roles": ["Operaations", "Engineering"] 
+    } 
+] 
+}

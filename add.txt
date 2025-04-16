@@ -1,0 +1,4 @@
+query -->  jq 'add' operation.json                 
+
+
+out --> 50

@@ -1,0 +1,6 @@
+JSON> jq -s 'add' file1.json file2.json 
+{
+  "a": 1,
+  "b": 2,
+  "c": 3
+}

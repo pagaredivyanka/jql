@@ -1,0 +1,29 @@
+{
+    "deliveries": [
+      {
+        "id": "D001",
+        "status": "delivered",
+        "region": "North",
+        "items": 12
+      },
+      {
+        "id": "D002",
+        "status": "pending",
+        "region": "West",
+        "items": 5
+      },
+      {
+        "id": "D003",
+        "status": "pending",
+        "region": "North",
+        "items": 9
+      },
+      {
+        "id": "D004",
+        "status": "pending",
+        "region": "East",
+        "items": 4
+      }
+    ]
+  }
+  

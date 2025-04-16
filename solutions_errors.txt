@@ -1,0 +1,379 @@
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.cities[1]' file.json
+null
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.cities[1]' file.json
+"Nashik"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.cities[0]' file.json
+"Mumbai"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.cities[-1]' file.json
+"Pune"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.num' file.json
+[
+  1,
+  2,
+  3,
+  4
+]
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.num[]' file.json
+1
+2
+3
+4
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.email.email1' file.json
+null
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emails.email1' file.json        
+"divyanka@example.com"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.[].email'
+
+
+
+\OneDrive\Desktop\Cogoport\JSON> jq\OneDrive\Desktop\Cogoport\JSON> jq '.[].email' file.json
+jq: error (at file.json:11): Cannot index array with string "email"
+PS C:\Users\Divyanka\OneDrive\Deskt\OneDrive\Desktop\Cogoport\JSON> jq '.[].email' file.json
+jq: error (at file.json:11): Cannot index array with string "email"
+\OneDrive\Desktop\Cogoport\JSON> jq '.[].email' file.json
+jq: error (at file.json:11): Cannot index array with string "email"
+\OneDrive\Desktop\Cogoport\JSON> jq '.[].email' file.json
+jq: error (at file.json:11): Cannot index array with string "email"       
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emls.email' file.json
+jq: error (at fil\OneDrive\Desktop\Cogoport\JSON> jq '.[].email' file.json
+jq: error (at file.json:11): Cannot index array with string "email" 
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emls.email' file.json
+jq: error (at file.json:11): Cannot index array with string "email" 
+PS C:\Users\Divya\OneDrive\Desktop\Cogoport\JSON> jq '.[].email' file.json le.json
+jq: error (at file.json:11): Cannot index array with string "email"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emls.email' file.json        index array wit
+jq: error (at file.json:11): Cannot index array with string "email"
+jq: error (at file.json:11): Cannot index array with string "email"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emls.email' file.json
+jq: error (at file.json:11): Cannot index array with string "email"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emls[].emails' file.json
+null
+null
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emls.email' file.json
+jq: error (at file.json:11): Cannot index array with string "email"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emls[].email' file.json
+"d@gmail.com"
+"r@gmail.com"
+
+
+
+
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.person[] | select(.likes > 100)' file.json
+{
+  "title": "post2",
+  "likes": 110
+}
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.person[] | select.likes < 50' file.json
+jq: error: select/0 is not defined at <top-level>, line 1:
+.person[] | select.likes < 50            
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.[erson[] | select(.likes < 50)' file.json
+jq: error: syntax error, unexpected end of file (Windows cmd shell quoting issues?) at <top-level>, line 1:
+.[erson[] | select(.likes < 50)        
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.person[] | select(.likes < 50)' file.json
+{
+  "title": "post1",
+  "likes": 40
+}
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emails[] | select(eamail1)' file.json
+jq: error: eamail1/0 is not defined at <top-level>, line 1:
+.emails[] | select(eamail1)                   
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emails[] | select(email1)' file.json 
+jq: error: email1/0 is not defined at <top-level>, line 1:
+.emails[] | select(email1)             
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emails[].email1' file.json          
+jq: error (at file.json:23): Cannot index string with string "email1"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq -r '.emails[].email1' file.json
+jq: error (at file.json:23): Cannot index string with string "email1"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.emails.email1' file.json
+jq: error (at file.json:22): Cannot index array with string "email1"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq -r '.emails.email1' file.json
+jq: error (at file.json:22): Cannot index array with string "email1"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq -r '.emails[].email1' file.json
+divyanka@example.com
+null
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'keys' file.json
+[
+  "cities",
+  "emails",
+  "emls",
+  "languages",
+  "num",
+  "person",
+  "roles"
+]
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.coders[].name' file.json
+"divyanka"
+"ritesh"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.skills | index("React")' file.json
+jq: error: React/0 is not defined at <top-level>, line 1:
+.skills | index(React)
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq -r '.skills | index("React")' file.json
+jq: error: React/0 is not defined at <top-level>, line 1:
+.skills | index(React)
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.skills[] | index("React")' file.json
+jq: error: React/0 is not defined at <top-level>, line 1:
+.skills[] | index(React)               
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq -r '.skills[] | index("React")' file.json
+jq: error: React/0 is not defined at <top-level>, line 1:
+.skills[] | index(React)               
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.skills[] | select(index("React"))' file.json
+jq: error: React/0 is not defined at <top-level>, line 1:
+.skills[] | select(index(React))       
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.skills[] | select(index(React))' file.json  
+jq: error: React/0 is not defined at <top-level>, line 1:
+.skills[] | select(index(React))       
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq -r '.skills[] | select(index("React"))' file.json
+jq: error: React/0 is not defined at <top-level>, line 1:
+.skills[] | select(index(React))       
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'select(skills | index("React"))' file.json
+jq: error: skills/0 is not defined at <top-level>, line 1:
+select(skills | index(React))
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'select(.skills | index("React"))' file.json
+jq: error: React/0 is not defined at <top-level>, line 1:
+select(.skills | index(React))         
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq -r 'select(.skills | index("React"))' file.json
+jq: error: React/0 is not defined at <top-level>, line 1:
+select(.skills | index(React))         
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.skills | index("React")' file.json
+>>
+jq: error: React/0 is not defined at <top-level>, line 1:
+.skills | index(React)
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'select(.skills | index("React"))' file.json
+>>
+jq: error: React/0 is not defined at <top-level>, line 1:
+select(.skills | index(React))         
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'select(.skills | index(\"React\"))' file.json
+>> 
+{
+  "languages": [
+    "Java",
+    "Python",
+    "React"
+  ],
+  "roles": [
+    "Developer",
+    "Engineer",
+    "System Engineer",
+    "QA"
+  ],
+  "cities": [
+    "Mumbai",
+    "Nashik",
+    "Pune"
+  ],
+  "emails": [
+    {
+      "email1": "divyanka@example.com" 
+    },
+    {
+      "email2": "ritesh@example.com"   
+    }
+  ],
+  "num": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "emls": [
+    {
+      "email": "d@gmail.com"
+    },
+    {
+      "email": "r@gmail.com"
+    }
+  ],
+  "person": [
+    {
+      "title": "post1",
+      "likes": 40
+    },
+    {
+      "title": "post2",
+      "likes": 110
+    },
+    {
+      "title": "post3",
+      "likes": 65
+    }
+  ],
+  "coders": [
+    {
+      "name": "divyanka",
+      "age": 20
+    },
+    {
+      "name": "ritesh",
+      "age": 21
+    }
+  ],
+  "skills": [
+    "Java",
+    "Python",
+    "React"
+  ]
+}
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.skills | index(\"React\"))' file.json       
+>> 
+jq: error: syntax error, unexpected INVALID_CHARACTER, expecting end of file (Windows cmd shell quoting issues?) at <top-level>, line 1:
+.skills | index("React"))              
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq ".skills | index(\"React\")" file.json
+>>
+jq: error: Invalid escape at line 1, column 4 (while parsing '"\)"') at <top-level>, line 1:
+.skills | index(" React\) file.json    
+
+jq: error: syntax error, unexpected end of file, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Windows cmd shell quoting issues?) at <top-level>, line 1:
+.skills | index(" React\) file.json    
+
+jq: 2 compile errors
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> ^C
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.people[] | select(.skills | contains(["React"]))' file.json
+>> 
+jq: error: React/0 is not defined at <top-level>, line 1:
+.people[] | select(.skills | contains([React]))                               
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.people[] | select(.skills | contains(["React"]))' file.json
+>>
+jq: error: React/0 is not defined at <top-level>, line 1:
+.people[] | select(.skills | contains([React]))                               
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq ".people[] | select(.skills | contains([\"React\"]))" file.json
+>>
+jq: error: Invalid escape at line 1, column 4 (while parsing '"\]"') at <top-level>, line 1:
+.people[] | select(.skills | contains([" React\])) file.json                  
+
+jq: error: syntax error, unexpected end of file, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Windows cmd shell quoting issues?) at <top-level>, line 1:
+.people[] | select(.skills | contains([" React\])) file.json                  
+
+jq: 2 compile errors
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.people[] | select(.skills | contains(["React"]))' file.json
+>>
+jq: error: React/0 is not defined at <top-level>, line 1:
+.people[] | select(.skills | contains([React]))                               
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.people[] | select(.skills | contains(["React"]))' file.json
+>>
+jq: error: React/0 is not defined at <top-level>, line 1:
+.people[] | select(.skills | contains([React]))                               
+
+jq: 1 compile error
+kills | contains(["React"]))' file.json
+>>
+jq: error: React/0 is not defined at <top-level>, line 1:    
+.people[] | select(.skills | contains([React]))              
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq ".people[] | select(.skills | contains([\"React\"]))" file.json   
+>>
+kills | contains(["React"]))' file.json
+>>
+jq: error: React/0 is not defined at <top-level>, line 1:
+.people[] | select(.skills | contains([React]))
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq ".people[] | select(.skills | contains([\"React\"]))" file.json
+ins([" React\])) file.json
+jq: error: syntax error, unexpected end of file, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Windows cmd shell quoting issues?) at <top-level>, line 1:
+.people[] | select(.skills | contains([" React\])) file.json
+ins([" React\])) file.json
+jq: error: syntax error, unexpected end of file, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Windows cmd shell quoting issues?) at <top-level>, line 1:
+.people[] | select(.skills | contains([" React\])) file.json
+jq: 2 compile errors
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.people[] | select(.skills | contains(["React"]))' file.json
+>>
+jq: error: React/0 is not defined at <top-level>, line 1:
+.people[] | select(.skills | contains([React]))
+jq: 1 compile error
+PS C:\Users\Di'      OneDrive\Desktop\Cogoport\JSON>
+
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '{fullname: .name, age: .age}' uppercase.json          {                                    
+  "fullname": "Divyanka",
+  "age": 21
+}
+
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.addition[].add' operation.json
+jq: error (at operation.json:3): Cannot index number with string "add"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.addition.add' operation.json  
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> ^C
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '[.[] | select(.age > 20)] | length' filter.json
+N> jq '[.[] | select(.age > 20)] | length' filter.json
+2
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'add' operation.json
+50
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'add' operation.json
+50
+jq: parse error: Invalid numeric literal at EOF at line 3, column 4
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '[.[] | select(.age > 20)] | length' filter.json
+2
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '{temperature: .weather.temp, condition: .weather.desc}' extract.json
+{
+  "temperature": 30,
+  "condition": "Sunny"
+}                                                                                             JSON>
+
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.a.b.c' reduceNested.json
+"value"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '{temperature: .weather.temp, condition: .weather.desc}' extract.json
+jq: parse error: Objects must consist of key:value pairs at line 3, column 36
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> ^C
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'reduce .weather[] as $item ({temperature: .weather.temp, condition: .weather.desc}' extract.json                     
+jq: error: syntax error, unexpected end of file (Windows cmd shell quoting issues?) at <top-level>, line 1:
+reduce .weather[] as $item ({temperature: .weather.temp, condition: .weather.desc}                                                           
+
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq -s 'add' file1.json file2.json 
+{
+  "a": 1,
+  "b": 2,
+  "c": 3
+}
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.users[0].roles[1]' ExtractFromArray.json
+"dev"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.users[2].roles[1]' ExtractFromArray.json
+"Dev"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSOPS C:\UsePS C:\UPPSPSPS CPS CPPPPPPPSPS C:\PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.users[1].roles[1]' ExtractFromArray.json
+"Engg"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'has(name)' has.json
+jq: error: name/0 is not defined at <top-level>, line 1:
+has(name)
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'has("name")' has.json
+jq: error: name/0 is not defined at <top-level>, line 1:
+has(name)
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq 'from_entities' convertArray.json    
+jq: error: from_entities/0 is not defined at <top-level>, line 1:
+from_entities
+jq: 1 compile error
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON>
+

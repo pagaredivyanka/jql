@@ -1,0 +1,12 @@
+Convert array of key-value objects
+
+query --> 
+
+jq "from_entries" convertArray.json
+
+
+output --> 
+{
+  "name": "Divyanka",
+  "email": "d@example.com"
+}

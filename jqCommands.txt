@@ -1,0 +1,33 @@
+1. 
+
+
+
+
+
+
+
+
+
+21. 
+
+jq "[.student[] | select(.skills[] == \"React\")]" uppercase.json
+[
+  {
+    "name": "D",
+    "skills": [
+      "React",
+      "Java"
+    ]
+  }
+]
+
+
+22. Count users age > 2 
+
+JSON: 
+[{ "name": "A", "age": 19 }, { "name": "B", "age": 23 }, { "name": "C", "age": 21 }]
+
+Command: jq '[.[] | select(.age > 20)] | length'
+Output: 2
+Explanation: Filters and counts entries.
+

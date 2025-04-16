@@ -1,0 +1,11 @@
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.users[0].roles[1]' ExtractFromArray.json
+"dev"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.users[2].roles[1]' ExtractFromArray.json
+"Dev"
+PS C:\Users\Divyanka\OneDrive\Desktop\Cogoport\JSON> jq '.users[1].roles[1]' ExtractFromArray.json
+"Engg"
+
+---------------------------------------------------------------------------------------------------
+
+Explanation: Accesses array inside an object.
+

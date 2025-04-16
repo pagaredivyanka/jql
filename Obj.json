@@ -1,0 +1,15 @@
+{
+    "lang" : ["Java", "Python"],
+
+
+  
+
+    "Sum_num" : [5, 10, 20],
+    "title" : "React Developer",
+    "user": { "name": "Divyanka", "role": "Developer" },
+    "people": 
+        [
+            { "name": "Divyanka", "skills": ["Java", "React"] },
+            { "name": "Ritesh", "skills": ["Python"] }
+        ]
+}

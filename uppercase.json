@@ -1,0 +1,19 @@
+{ 
+    "city": "nashik",
+    "first": "Divyanka", "last": "Pagare",
+    "name": "Divyanka", "age": 21,
+    "marks" : [67,87,93,23,54],
+
+    "student" : [
+        { "name": "D", "skills": ["React", "Java"] }, 
+        { "name": "R", "skills": ["Python"] }
+    ],
+    "member" : 
+    [
+        { "name": "A", "age": 19 }, 
+        { "name": "B", "age": 23 }, 
+        { "name": "C", "age": 21 }
+    ]
+}
+
+

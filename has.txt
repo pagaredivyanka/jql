@@ -1,0 +1,7 @@
+jq "has(\"name\")" has.json --> true
+
+
+jq "has(\"College\")" has.json  --> false
+
+
+if key is present in the json file then it print true otherwise it prints false 

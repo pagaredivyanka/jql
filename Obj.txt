@@ -1,0 +1,24 @@
+
+
+
+json --> 
+
+"people": 
+        [
+            { "name": "Divyanka", "skills": ["Java", "React"] },
+            { "name": "Ritesh", "skills": ["Python"] }
+        ]
+
+query --> 
+
+jq ".people[] | select(.skills | contains([\"React\"]))" Obj.json
+
+out --> 
+
+{
+  "name": "Divyanka",
+  "skills": [
+    "Java",
+    "React"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "new" : 
+    [
+        { "name": "D", "email": "d@example.com" }, 
+        { "name": "R", "email": "r@example.com" }
+    ]
+}

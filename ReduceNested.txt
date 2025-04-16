@@ -1,0 +1,3 @@
+command --> jq '.a.b.c' reduceNested.json
+
+o/p --> "value"

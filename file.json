@@ -1,0 +1,63 @@
+{
+    "languages" : ["Java", "Python", "React"],
+    "roles" : ["Developer", "Engineer", "System Engineer", "QA"],
+    "cities" : ["Mumbai", "Nashik", "Pune"],
+
+    "emails" :
+    [
+        {"email1" : "divyanka@example.com"},
+        { "email2" : "ritesh@example.com"}
+    ],
+
+    "num" : [1, 2, 3, 4],
+
+    "emls" : 
+    [
+        {"email" : "d@gmail.com"}, 
+        {"email" : "r@gmail.com"}
+    ],
+
+    "person" : 
+    [
+        {"title" : "post1", "likes": 40},
+        {"title" : "post2", "likes": 110},
+        {"title" : "post3", "likes": 65}
+    ],
+
+    "coders" : 
+    [
+        {"name" : "divyanka", "age" : 20},
+        {"name" : "ritesh", "age" : 21}
+    ],
+    "people":
+    [
+        { 
+            "name" : "Divyanka", 
+            "skills" : 
+            [
+                "React", 
+                "Java"
+            ], 
+            "age": 21 
+        },
+        { 
+            "name" : "Ritesh", 
+            "skills" : 
+            [
+                "Python"
+            ], 
+            "age": 22 
+        }
+    ],
+
+    "user" : 
+    [
+        {"name" : "D", "roles" : ["admin", "dev"]}
+    ],
+    "name" : "D",
+    "new" : 
+    [
+        { "name": "D", "email": "d@example.com" }, 
+        { "name": "R", "email": "r@example.com" }
+    ]
+}
